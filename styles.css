@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
+}
+
+select, input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 5px; /* Add some space around select and input */
+}
+
+#preview {
+  width: 320px;
+  height: 240px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#review {
+  margin-top: 20px;
+}
+
+#recordedVideo {
+  width: 640px;
+  height: 480px;
+  border: 1px solid #ccc;
+}
+
+#downloadButton {
+  margin-top: 10px;
+}
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .container {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  button, select, input[type="number"] {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+    margin: 5px; /* Adjust margin */
+  }
+
+  #preview, #recordedVideo {
+    width: 100%; /* Make videos responsive */
+    height: auto;
+  }
+
+  #recordedVideo {
+      max-width: 640px; /* Set a maximum width for larger screens */
+  }
+
+  .controls {
+    flex-direction: column; /* Stack controls vertically */
+    align-items: center;
+  }
+
+  .controls label, .controls select, .controls input {
+      margin-bottom: 5px; /* Add margin between stacked controls */
+  }
+
+}
