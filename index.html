@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Recorder</title>
+    <style>
+       .settings {
+            margin-bottom: 20px;
+       }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="settings">
+        <label for="displaySource">Record Area:</label>
+        <select id="displaySource">
+            <option value="screen">Screen</option>
+            <option value="window">Window</option>
+        </select>
+         <label for="resolution">Resolution:</label>
+        <select id="resolution">
+            <option value="480">480</option>
+            <option value="720">720</option>
+            <option value="1080">1080</option>
+        </select>
+         <label for="fps">FPS:</label>
+        <select id="fps">           
+            <option value="24">24</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="recordAudio" checked> Record Audio
+        </label>
+    </div>
+
+    <button id="startBtn">Start Recording</button>
+    <button id="stopBtn" disabled>Stop Recording</button>
+     <span id="recordTime">00:00</span>
+    <video id="preview" autoplay muted></video>
+	
+    <a id="downloadLink" style="display:none;">Download Recording</a>
+	
+    <video id="reviewVideo" controls style="display:none;"></video>
+
+    <script src="script.js"></script>
+</body>
+</html>
